@@ -1,4 +1,4 @@
-function Kn = findBorderK0PID(Kr, Td, Ti,T0)
+function Kn = findBorderK0PID(Kr, Td, Ti, T0)
 thresh = 0.01;
 Kn = 5.5;
 Gd = generateObjectTF(Kn,5);
@@ -33,4 +33,3 @@ while upper-lower>thresh
         upper = Kn;
     end
 end
-step(Gpid,2000);

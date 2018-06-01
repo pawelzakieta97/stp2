@@ -28,5 +28,3 @@ while upper-lower>thresh
         upper = Kn;
     end
 end
-[resp,~] = CustomDMCresponse(yzad,Gd,s,N, Nu, D, lambda);
-plot(resp);
