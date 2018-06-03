@@ -1,11 +1,11 @@
-InitialValues;
+InitialValuesMati;
 yzad = ones(250,1);
 yzad(1:29) = 0;     %skok w 30 probce
 t = -14.5:0.5:220;  %przesuniêcie o 15 sekund (skok w 0)
 lambda = 10;
-N = 20;
-Nu = 1;
-D = 70;
+N = 60;
+Nu = 3;
+D = 75;
 lambdav = [1000,100,20,10,3,1];
 
 %rysowanie sygna³u wyjœciowego
@@ -23,7 +23,7 @@ ylabel('y(t)');
 fig = gcf;
 fig.Position = [10,10,900,600];
 grid on;
-fileName = '5\5d.svg';
+fileName = '5\d.svg';
 print('-dsvg','-r600', fileName);
 axis([10 40 0.8 1.2]);
 legend('Location','Best');

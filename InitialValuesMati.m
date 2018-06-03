@@ -1,0 +1,10 @@
+K0 = 1.3;
+T0 = 5;
+T1 = 1.69;
+T2 = 5.59;
+Tp = 0.5;
+b = [0,0,K0];
+a = [T1*T2, T1+T2, 1];
+Gc = tf(b,a);
+Gc.InputDelay = T0;
+Gd = c2d(Gc,Tp,'zoh');

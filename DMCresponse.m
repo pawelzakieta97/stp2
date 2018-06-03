@@ -1,10 +1,12 @@
+%funkcja zwracaj¹ca odpowiedŸ i wartoœæ sygna³u steruj¹cego modelu 
+%o transmitancji tf z regulatorem DMC o podanych parametrach 
+%na pobudzenie o przebiegu yzad
 function [y,u] = DMCresponse(yzad, tf, N, Nu, D, lambda)
-%calculates K matrix and simulates response to yzad signal
+
 [l,m] = tfdata(tf,'v');
 l_stopien = length(l)-1;
 m_stopien = length(m)-1;
 del = tf.InputDelay+tf.OutputDelay;
-
 
 kmax = length(yzad);
 y = zeros(kmax,1);
